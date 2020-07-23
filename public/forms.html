@@ -47,9 +47,10 @@
                     </div>
 
                     <div id="trekkingTurn" class="d-none">
-                        <p for="partDay">
+                        <fieldset>
+                        <legend for="partDay">
                             Passeggiata alla mattina o nel pomeriggio?
-                        </p>
+                        </legend>
                         <div>
                             <input
                                 type="radio"
@@ -68,10 +69,11 @@
                             />
                             <label for="pomeriggio">Pomeriggio</label>
                         </div>
+                        </fieldset>
                     </div>
-
                     <div id="walkDays" class="d-none">
-                        <p for="duration">Quanti giorni?</p>
+                        <fieldset>
+                        <legend for="duration">Quanti giorni?</legend>
                         <div>
                             <input
                                 type="radio"
@@ -99,6 +101,7 @@
                             />
                             <label for="duration">3 Giorni</label>
                         </div>
+                        </fieldset>
                     </div>
 
                     <div id="personNumber">
@@ -112,19 +115,19 @@
                     </div>
 
                     <div id="email">
-                        <label for="email">email del referente:</label>
+                        <label for="email">Email del referente:</label>
                         <input type="email" id="email" name="email" />
                     </div>
                     <!--Button NEXT STOP-->
                     <a href="#" id="nextStep" class="button">next step</a>
                 </div>
 
-                <div id="secondForm" class="d-none"></div>
+                <div id="secondForm" class="d-none" name="client"></div>
                 <div id="lastStep" class="d-none">
                     <label for="confirmCompilation"
                         >Conferma la tua prenotazione.</label
                     >
-                    <input type="submit" id="confirmCompilation" />
+                    <input type="submit" id="confirmCompilation" class="buttonConfirm" >
                 </div>
             </form>
         </div>

@@ -1,10 +1,11 @@
 /* init */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 @import './styles/init.css';
 
 /* layout */
 
 /*  */
-@import './styles/modules/navbar.css';
+@import './styles/navbar.css';
 
 .d-none {
   display: none;
@@ -18,22 +19,17 @@ height: 100vh;
 background-repeat: no-repeat;
 justify-content: center; 
 min-height: 100vh;*/
-
+font-family: 'Poppins', sans-serif;
 background-image: url("https://www.hellogreen.it/wp/wp-content/uploads/2019/07/trekking-italia-bologna-percorsi.jpg");
 background-size: cover;
 background-repeat: no-repeat;
 height: 100vh;
-
-
-
-
-
 }
 
 .my-container {
   display:flex;
   flex-direction: column;
-  max-width: 450px;
+  max-width: 500px;
   width: 100%; 
   background-color: rgba(249, 249, 249, 0.6); 
   padding: 25px;
@@ -77,7 +73,17 @@ height: 100vh;
   line-height: 25px;
   text-decoration: none;
 }
-
+.buttonConfirm {
+  display: block;
+  background: #4E9CAF;
+  padding: 7px;
+  text-align: center;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  line-height: 25px;
+  text-decoration: none;
+}
 /* #contact {
   display: flex;
   flex-direction: column;

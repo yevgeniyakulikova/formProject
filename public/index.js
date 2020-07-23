@@ -62,8 +62,8 @@ function fillClientsCompilations() {
         document.getElementById("secondForm").innerHTML +=
             '</br><div><label for ="client">Nome Cognome:</label><input type="text" id="client" name="fullname"/></div>' +
             '<div class="data"><label for="dateTravel">Data di Nascita:</label><input type="date" id="dateTravel" name="birthday" /></br></div>' +
-            '<div class="nt"><label for="nation">Nazionalità:</label><select class="nation" name="nation"></select></div>'+
-            '<div class="equipment">Vuoi prenotare attrezzatura?</div>';
+            '<div class="nt"><label for="nation">Nazionalità:</label><input list="list-nation" name="nation"><datalist id="list-nation" class="nation"></datalist</input></div>'+
+            '<fieldset><legend >Di quale attrezzatura sei già munito?</legend><div name="equipment" class="equipment"></div></fieldset>';
     }
 }
 
