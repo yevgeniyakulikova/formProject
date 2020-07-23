@@ -80,6 +80,12 @@ function getCountryOptions() {
     });
 }
 
+
+
+// 
+
+
+
 //
 
 document.getElementById("typeTravel").addEventListener("change", () => {
@@ -87,13 +93,31 @@ document.getElementById("typeTravel").addEventListener("change", () => {
     personsClimbLimit();
 });
 
+
+
+
+
 document.getElementById("nextStep").addEventListener("click", () => {
     document.getElementById("firstForm").classList.toggle("d-none");
     document.getElementById("secondForm").classList.toggle("d-none");
     document.getElementById("lastStep").classList.toggle("d-none");
+    document.getElementsByTagName("span")[1].classList.add("finish");    
     fillClientsCompilations();
     getCountryOptions();
-    equipmentOptions()
+    equipmentOptions();
+
 });
+
+document.getElementById("startForm").addEventListener("click", () =>{    
+    document.getElementById("formContainer").classList.replace("d-none", "my-container");
+    document.getElementById("jumbotronButton").classList.replace("jumbotron","d-none");
+    document.getElementsByTagName("span")[0].classList.add("finish");
+
+    
+})
+
+
+
+
 
 console.log("patata");

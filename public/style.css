@@ -26,8 +26,28 @@ background-repeat: no-repeat;
 height: 100vh;
 }
 
-.my-container {
+.jumbotron {
   display:flex;
+  flex-direction: column;
+  max-width: 600px;
+  height: 200px;
+  width: 100%; 
+  background-color: rgba(249, 249, 249, 0.8); 
+  padding: 25px;
+  margin: auto;
+  margin-top: 100px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  border-radius: 8px;
+}
+
+
+#startForm,h2,p {
+  padding: 1rem;
+}
+
+
+.my-container {
+  display: flex;
   flex-direction: column;
   max-width: 500px;
   width: 100%; 
@@ -40,37 +60,40 @@ height: 100vh;
 }
 
 
-.modal-header {
-  height: 45px;
-  
-  border-bottom: 1px solid #ccc;
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-          align-items: center;
-}
-.modal-header span {
-  display: block;
-  height: 12px;
-  width: 12px;
-  margin: 5px;
+/* Make circles that indicate the steps of the form: */
+.step {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #908d8d;
+  border: none;
   border-radius: 50%;
-  background: rgba(0, 0, 0, 0.2);
+  display: inline-block;
+  opacity: 1;
+}
+
+/* Mark the active step: */
+.step.active {
+  opacity: 1;
+}
+
+/* Mark the steps that are finished and valid: */
+.step.finish {
+  background-color:  rgb(253, 143, 0, 1);
 }
 
 .button {
+  margin-top: 1rem;
   display: block;
-  width: 115px;
-  height: 25px;
-  background: #4E9CAF;
+  width: 95px;
+  height: 10px;
+  background: rgb(253, 143, 0, 0.9);
   padding: 10px;
   text-align: center;
   border-radius: 5px;
   color: white;
   font-weight: bold;
-  line-height: 25px;
+  line-height: 10px;
   text-decoration: none;
 }
 .buttonConfirm {
@@ -84,8 +107,3 @@ height: 100vh;
   line-height: 25px;
   text-decoration: none;
 }
-/* #contact {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-} */
