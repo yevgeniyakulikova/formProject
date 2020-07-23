@@ -1,4 +1,3 @@
-// axios.get('/listnations').then(.......
 
 let cycleDaysControl = false;
 let trekkingTurnControl = false;
@@ -63,7 +62,7 @@ function fillClientsCompilations() {
             '</br><div><label for ="client">Nome Cognome:</label><input type="text" id="client" name="fullname"/></div>' +
             '<div class="data"><label for="dateTravel">Data di Nascita:</label><input type="date" id="dateTravel" name="birthday" /></br></div>' +
             '<div class="nt"><label for="nation">Nazionalità:</label><input list="list-nation" name="nation"><datalist id="list-nation" class="nation"></datalist</input></div>'+
-            '<fieldset><legend >Di quale attrezzatura sei già munito?</legend><div name="equipment" class="equipment"></div></fieldset>';
+            '<fieldset><legend>Di quale attrezzatura sei già munito?</legend><div name="equipment" class="equipment"></div></fieldset>';
     }
 }
 
@@ -79,8 +78,13 @@ function getCountryOptions() {
         }
     });
 }
+let numberPerson=0;
+let persons=[]
+function cardsInput(){
+    for(let i=0; i<num; i++){
 
-
+    }
+}
 
 // 
 
@@ -101,8 +105,9 @@ document.getElementById("nextStep").addEventListener("click", () => {
     document.getElementById("firstForm").classList.toggle("d-none");
     document.getElementById("secondForm").classList.toggle("d-none");
     document.getElementById("lastStep").classList.toggle("d-none");
-    document.getElementsByTagName("span")[1].classList.add("finish");    
-    fillClientsCompilations();
+    document.getElementsByTagName("span")[1].classList.add("finish");
+    numberPerson =document.getElementById("persons").value;
+    //fillClientsCompilations();
     getCountryOptions();
     equipmentOptions();
 
@@ -115,8 +120,19 @@ document.getElementById("startForm").addEventListener("click", () =>{
 
     
 })
-
-
+document.getElementById("nextPerson").addEventListener("click", ()=>{
+    if(numberPerson == 0){
+        document.getElementById("secondForm").classList.toggle("d-none");
+        document.getElementById("lastStep").classList.toggle("d-none");
+    }else{
+        numberPerson--;
+        persons.push({fullname: document.getElementById("fullname").value, birthday: document.getElementById("birthday").value, nation: document.getElementById("nation").value, equipment: document.getElementById("equipment").value})
+        document.getElementById("secondForm").reset()
+    }
+})
+document.getElementById("finalStep").addEventListener("click", ()=>{
+    console.log(persons);
+})
 
 
 

@@ -128,15 +128,21 @@
                         <input type="email" id="email" name="email" />
                     </div>
                     <!--Button NEXT STOP-->
-                    <a href="#" id="nextStep" class="button">next step</a>
+                    <a href="#" id="nextStep" class="button">next step</input>
                 </div>
 
-                <div id="secondForm" class="d-none" name="client"></div>
+                <div id="secondForm" class="d-none" name="client">
+                </br><div><label for ="client">Nome Cognome:</label><input type="text" id="client" name="fullname"/></div>
+                <div class="data"><label for="dateTravel">Data di Nascita:</label><input type="date" id="dateTravel" name="birthday" /></br></div>
+                <div class="nt"><label for="nation">Nazionalità:</label><input list="list-nation" name="nation"><datalist id="list-nation" class="nation"></datalist</input></div>
+                <fieldset><legend>Di quale attrezzatura sei già munito?</legend><div name="equipment" class="equipment"></div></fieldset>
+                <a href="#" id="nextPerson" class="button" >Prossima Persona </a>
+                </div>
                 <div id="lastStep" class="d-none">
                     <label for="confirmCompilation"
                         >Conferma la tua prenotazione.</label
                     >
-                    <input type="submit" id="confirmCompilation" class="buttonConfirm" >
+                    <a href="#" id="finalStep"  class="buttonConfirm" >Vai al riepilogo </a>
                 </div>
             </form>
         </div>
