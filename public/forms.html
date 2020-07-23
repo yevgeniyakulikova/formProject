@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+       
+        <link rel="stylesheet" href="style.css" type="text/css" />
+    </head>
+    <body>
+      <!--navbar-->
+      <header class="navbar">
+        <h2 class="navbar-logo">Logo</h2>
+        <ul class="navbar-items">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Chi siamo</a></li>
+          <li><a href="#">Contatti</a></li>
+        </ul>
+      </header>
+       <!--navbar-->
+        <div class="my-container">
+            <div class="modal-header">
+                <span class="is-active"></span><span></span>
+            </div>
+            <form id="contact" action="/home" method="post">
+                <div id="firstForm" class="form-group">
+                    <div class="excursionism">
+                        <label for="typeTravel"
+                            >Scegli la tua tipologia di viaggio: &nbsp;</label
+                        >
+                        <select name="typeTravel" id="typeTravel">
+                            <option value="">--</option>
+                            <option value="trekking"
+                                >Passegiata nel bosco</option
+                            >
+                            <option value="cycling">Giro in bici</option>
+                            <option value="climbing"
+                                >Escursione con arrampicata</option
+                            >
+                        </select>
+                    </div>
+
+                    <div class="data">
+                        <label for="dateTravel">Start date:</label>
+                        <input type="date" id="dateTravel" name="trip-start" />
+                    </div>
+
+                    <div id="trekkingTurn" class="d-none">
+                        <p for="partDay">
+                            Passeggiata alla mattina o nel pomeriggio?
+                        </p>
+                        <div>
+                            <input
+                                type="radio"
+                                id="mattina"
+                                value="mattina"
+                                name="partDay"
+                            />
+                            <label for="mattina">Mattina</label>
+                        </div>
+                        <div>
+                            <input
+                                type="radio"
+                                id="pomeriggio"
+                                value="pomeriggio"
+                                name="partDay"
+                            />
+                            <label for="pomeriggio">Pomeriggio</label>
+                        </div>
+                    </div>
+
+                    <div id="walkDays" class="d-none">
+                        <p for="duration">Quanti giorni?</p>
+                        <div>
+                            <input
+                                type="radio"
+                                id="d-1"
+                                value="1"
+                                name="duration"
+                            />
+                            <label for="duration">1 Giorno</label>
+                        </div>
+                        <div>
+                            <input
+                                type="radio"
+                                id="d-2"
+                                value="2"
+                                name="duration"
+                            />
+                            <label for="duration">2 Giorni</label>
+                        </div>
+                        <div>
+                            <input
+                                type="radio"
+                                id="d-3"
+                                value="3"
+                                name="duration"
+                            />
+                            <label for="duration">3 Giorni</label>
+                        </div>
+                    </div>
+
+                    <div id="personNumber">
+                        <label for="persons">Numero di persone:</label>
+                        <input type="number" id="persons" name="persons" />
+                    </div>
+
+                    <div id="client">
+                        <label for="client">Nome Cognome del referente:</label>
+                        <input type="text" id="client" name="client" />
+                    </div>
+
+                    <div id="email">
+                        <label for="email">email del referente:</label>
+                        <input type="email" id="email" name="email" />
+                    </div>
+                    <!--Button NEXT STOP-->
+                    <a href="#" id="nextStep" class="button">next step</a>
+                </div>
+
+                <div id="secondForm" class="d-none"></div>
+                <div id="lastStep" class="d-none">
+                    <label for="confirmCompilation"
+                        >Conferma la tua prenotazione.</label
+                    >
+                    <input type="submit" id="confirmCompilation" />
+                </div>
+            </form>
+        </div>
+        
+       <!-- Footer -->
+
+  <!-- Footer -->
+    </body>
+    <script src="index.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"
+    ></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"
+    ></script>
+    <script
+        src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"
+    ></script>
+</html>
