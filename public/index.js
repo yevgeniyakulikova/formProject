@@ -104,7 +104,6 @@ document.getElementById("typeTravel").addEventListener("change", () => {
 document.getElementById("nextStep").addEventListener("click", () => {
     document.getElementById("firstForm").classList.toggle("d-none");
     document.getElementById("secondForm").classList.toggle("d-none");
-    document.getElementById("lastStep").classList.toggle("d-none");
     document.getElementsByTagName("span")[1].classList.add("finish");
     numberPerson =document.getElementById("persons").value;
     //fillClientsCompilations();
@@ -126,8 +125,9 @@ document.getElementById("nextPerson").addEventListener("click", ()=>{
         document.getElementById("lastStep").classList.toggle("d-none");
     }else{
         numberPerson--;
-        persons.push({fullname: document.getElementById("fullname").value, birthday: document.getElementById("birthday").value, nation: document.getElementById("nation").value, equipment: document.getElementById("equipment").value})
+        persons.push({fullname: document.getElementById("client").value, birthday: document.getElementById("birthday").value, nation: document.getElementById("nation").value, equipment: document.getElementById("equipment").value})
         document.getElementById("secondForm").reset()
+        console.log(persons);
     }
 })
 document.getElementById("finalStep").addEventListener("click", ()=>{

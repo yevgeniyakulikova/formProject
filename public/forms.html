@@ -120,7 +120,7 @@
 
                     <div id="client">
                         <label for="client">Nome Cognome del referente:</label>
-                        <input type="text" id="client" name="client" />
+                        <input type="text" id="clientPrenotation" name="client" />
                     </div>
 
                     <div id="email">
@@ -128,8 +128,9 @@
                         <input type="email" id="email" name="email" />
                     </div>
                     <!--Button NEXT STOP-->
-                    <a href="#" id="nextStep" class="button">next step</input>
+                    <a href="#" id="nextStep" class="button">next step</a>
                 </div>
+            </form>
 
                 <div id="secondForm" class="d-none" name="client">
                 </br><div><label for ="client">Nome Cognome:</label><input type="text" id="client" name="fullname"/></div>
@@ -139,12 +140,9 @@
                 <a href="#" id="nextPerson" class="button" >Prossima Persona </a>
                 </div>
                 <div id="lastStep" class="d-none">
-                    <label for="confirmCompilation"
-                        >Conferma la tua prenotazione.</label
-                    >
-                    <a href="#" id="finalStep"  class="buttonConfirm" >Vai al riepilogo </a>
+                    <label for="confirmCompilation">Conferma la tua prenotazione.</label>
+                    <input type="submit" value="Submit" id="finalStep"  class="buttonConfirm" ></input>
                 </div>
-            </form>
         </div>
         
        <!-- Footer -->
